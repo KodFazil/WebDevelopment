@@ -1,0 +1,19 @@
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-content: center;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    border: solid black;
+}
+
+.mole {
+    background-image: url(Kostebek.png);
+    background-size: cover;
+}
