@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         win();
     } 
 
-    //move the cars
+    // move the cars
     function autoMoveCars() {
         carsLeft.forEach(carLeft => moveCarLeft(carLeft));
         carsRight.forEach(carRight => moveCarRight(carRight));
@@ -73,13 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //move the logs
+    // move the logs
     function autoMoveLogs() {
         logsLeft.forEach(logLeft => moveLogLeft(logLeft));
         logsRight.forEach(logRight => moveLogRight(logRight));
     }
 
-    //logs going left
+    // logs going left
     function moveLogLeft(logLeft) {
         if (logLeft.classList.contains("l1")) {
             logLeft.classList.remove("l1");
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //logs going right
+    // logs going right
     function moveLogRight(logRight) {
         if (logRight.classList.contains("l1")) {
             logRight.classList.remove("l1");
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //rules for win
+    // rules for win
     function win() {
         if (squares[4].classList.contains("frog")) {
         resultArea.innerHTML = "You Win";
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //rules for lose
+    // rules for lose
     function lose() {
         if (
             (currentTime == 0 ) || 
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
         
-    //all the functions that move pieces
+    // all the functions that move pieces
     function movePieces() {
         currentTime--;
         timeArea.textContent = currentTime;
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lose();
     }
 
-    //to start, and pause the game
+    // to start and pause the game
     strButton.addEventListener("click", () => {
         if (timer) {
             clearInterval(timer);
